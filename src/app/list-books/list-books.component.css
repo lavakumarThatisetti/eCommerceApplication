@@ -1,0 +1,32 @@
+.card-img-top{
+    height: 250px;
+}
+#item{
+    width: 250px;
+}
+span.stars, span.stars span {
+    display: flex;
+    background: url('https://apppresser.com/wp-content/uploads/2015/11/stars.png') 0 -16px repeat-x;
+    width: 80px;
+    height: 16px;
+}
+span.stars span {
+    background-position: 0 0;
+}
+.card-title{
+    color: #0d7cc9!important;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#description span{
+    color: #777;
+}
+
+#price{
+    color: maroon;
+    font-size: 30px;
+}
+#rupee{
+    color: maroon;
+    font-size: 24px;
+}
