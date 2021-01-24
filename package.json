@@ -4,12 +4,11 @@
   "scripts": {
     "ng": "ng --proxy--config proxy-config.json",
     "heroku-postbuild": "ng build --prod",
-    "start": "node server.js",
+    "start": "node index.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "postinstall": "ng build --aot --prod"
+    "e2e": "ng e2e"
   },
   "engines": {
     "node": "12.16.1",
