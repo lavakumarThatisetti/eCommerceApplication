@@ -20,8 +20,7 @@ import { YourOrdersComponent } from './your-orders/your-orders.component';
     ListBooksComponent,
     ViewCartComponent,
     RegisterComponent,
-    YourOrdersComponent,
-    HttpClientModule,
+    YourOrdersComponent
   ],
   imports: [
     BrowserModule,
