@@ -23,6 +23,6 @@ export class PaymentsService {
   constructor(private http:HttpClient) { }
   sendPayment(order: Order):Observable<any>{
     console.log("this ",order);
-    return this.http.post(this.paymentGatewayUrl,order);
+    return this.http.post(this.baseUrl+this.paymentGatewayUrl,order);
   }
 }
