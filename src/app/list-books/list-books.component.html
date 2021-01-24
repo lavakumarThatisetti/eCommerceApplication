@@ -1,0 +1,132 @@
+<div style="text-align:center">
+    <h1>
+      Welcome to {{ title }}!
+    </h1>
+</div>
+
+<!-- Search Bar-->
+<div id="Search Bar" class="container">
+    <div class="input-bar">
+      <div class="input-bar-item width100">
+            <div class="input-group">
+              <input required placeholder=" Search All Books By Title"  [(ngModel)]="searchBook" type="text" class="form-control width100 rounded">
+              <span class="input-group-btn">                          
+                  <button type="submit" class="btn btn-danger btn-block rounded" (click)="viewCart()">
+                      <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                  </button>
+              </span>
+          </div>
+      </div>
+    </div>
+</div>
+<br>
+<!-- <cdk-virtual-scroll-viewport>
+    
+</cdk-virtual-scroll-viewport> -->
+<div id="BooksList" class="container">
+    <div class="search-results"
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="50"
+    (scrolled)="onScroll()">
+    <div class="row">
+        <div class="col-lg-4 d-flex align-items-stretch" id="item" *ngFor="let book of BooksData|bookfilter:searchBook; index as ndx">
+           <div class="card mb-5" id="cardAlign">
+               <img class='card-img-top' src="{{book.Image}}" alt="book image"/>
+               <div class="card-body">
+                <h6 class="card-title title">{{book.title}} <span id="rupee"><sup>&#8377;</sup></span><span id="price">{{book.price}}</span></h6>
+                <div class="card-text">
+                   <div id="description">
+                      <span id="author_name">{{book.authors}}</span><span> (Author)</span>
+                   </div>
+                   <div id="rating">
+                      <span class="stars">
+                        <span [ngStyle]="{'width':(book.average_rating)/5 * 100 + '%'}"></span>
+                      </span>
+                   </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                 <div class="row">
+                    <div class="col">
+                        <i class="fa fa-book" aria-hidden="true"></i>
+                        <span> {{book.ratings_count}}</span>
+                    </div>
+                    <div class="col">
+                        <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#ViewCart" (click)="open(book)">View Book</a>
+                    </div>
+                 </div>
+              </div> 
+            </div> 
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="row pb-5">
+    <div class="col-md-12 p-5">
+    <ngx-spinner
+    bdOpacity = 0.9
+    bdColor = ""
+    size = "default"
+    color = "#581f87"
+    type = "ball-pulse-sync"
+    [fullScreen] = "false"
+    >
+    </ngx-spinner>
+    </div>
+</div>
+
+<div class="modal" id="ViewCart" tabindex="-1" style="width:100%;" *ngIf="checkRating">
+    <div class="modal-dialog  modal-lg">
+      <div class="modal-content">  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title" id="modelTitle">{{book_item.title}}</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+                <div class="block">
+                    <div class="row">
+                      <div class="span4">
+                        <img id="imgInModel" src="{{book_item.Image}}"/>
+                        <h3>{{book_item.authors}} (Author)</h3>
+                        <hr/>
+                        <p><b>About Book</b> Harry is written as an orphan living with his only remaining family, the Dursleys, who are neglectful and abusive. On his eleventh birthday in 1991, Harry learns he is a wizard when Rubeus Hagrid arrives to tell him that he is to attend Hogwarts School of Witchcraft and Wizardry.</p>
+                        <hr/>
+                        <div id="readers">
+                          <span><b>Readers: </b></span>
+                           <i class="fa fa-book" aria-hidden="true"></i>:
+                           <span>{{book_item.ratings_count}}</span>     
+                         </div>
+                        <div id="isbn">
+                            <span><b>ISBN: </b></span>
+                            <span>{{book_item.isbn}}</span>       
+                         </div>
+                         <div id="rating">
+                          <span class="stars" *ngIf="checkRating">
+                            <span [ngStyle]="{'width':(book_item.average_rating)/5 * 100 + '%'}"></span>
+                          </span>      
+                         </div>
+                      </div>
+                   </div>
+                </div>            
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+              <button type="button" id="btnCart" class="btn btn-warning text-nowrap" data-dismiss="modal" (click)="AddtoCart(book_item)">Add Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+              <button type="button" id="btnBuy" class="btn btn-success ml-1" (click)="BuyNow(book_item)">Buy Now <i class="fa fa-play" aria-hidden="true"></i></button>  
+       
+         </div>
+        
+      </div>
+    </div>
+  </div> 
+  
+  <div *ngIf = "!notEmptyBook" class="row pb-5">
+    <div class="col-lg-12 d-flex justify-content-center">
+      <div class="text-muted h6 alert alert-secondary p-2">No more items to show</div>
+    </div>
+  </div>

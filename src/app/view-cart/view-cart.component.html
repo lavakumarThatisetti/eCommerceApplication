@@ -1,0 +1,68 @@
+<!--Book List-->
+<div style="text-align:center">
+    <h1>
+          List of items in your cart
+    </h1>
+</div>
+
+ <!--Book List-->
+ <br/>
+ <div id="BooksList" class="container">
+    <div id="booklist" *ngFor="let book of booksOnCart; index as ndx">
+       <div class="card mb-3">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img class='card-img-top' src="{{book.Image}}" alt="book image"/>
+          </div>
+          <div class="col-md-8">
+           <div class="card-body">
+              <h2 class="card-title">
+                {{book.title}} 
+              </h2>
+              <br>
+              <div class="card-text">
+                <div id="description">
+                    <span id="author_name"><b>{{book.authors}}</b></span> <span> (Author)</span>
+                </div>
+                <br>
+                <div id="rating">
+                    <span class="stars">
+                      <span [ngStyle]="{'width':(book.average_rating)/5 * 100 + '%'}"></span>
+                    </span>
+                </div>
+                <br>
+                <div>
+                      Readears: <i class="fa fa-book" aria-hidden="true"></i>
+                      <span> {{book.ratings_count}}</span>
+                </div>
+                <hr>
+                <div id="priceStyle">
+                  <span id="rupee"><sup>&#8377;</sup></span><span id="price">{{book.price}}</span>
+                </div>
+                <div>
+                    <button href="#" class="btn btn-success" (click)="open(book)">Buy Book</button>
+                    <button href="#" class="btn btn-danger" (click)="removeFromCart(book)">Remove From Cart</button>    
+                </div>
+              </div>
+          </div>
+          </div>
+          </div>
+    </div>
+</div>
+ </div>
+<div class="totalItems">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-total">
+              Cart Summary
+            </h5>
+            <div>
+              <span><b>Total Items:</b> {{totalItems}}</span><br>
+              <span><b>Total Price:</b> {{totalSum}} </span>
+              <br>
+              <br>
+              <button href="#" class="btn btn-outline-success btn-lg buyall" (click)="buyAll()">Check Items <i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+            </div>
+          </div>
+      </div>
+</div>

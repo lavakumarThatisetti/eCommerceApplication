@@ -1,0 +1,66 @@
+{
+    "/books":{
+        "target":"https://s3-ap-southeast-1.amazonaws.com/he-public-data/books8f8fe52.json",
+        "secure":true,
+        "logLevel":"debug",
+        "pathRewrite": {
+            "^/books": ""
+        },
+        "changeOrigin":true
+    },
+    "/bookImages":{
+        "target":"https://s3-ap-southeast-1.amazonaws.com/he-public-data/bookimage816b123.json",
+        "secure":true,
+        "logLevel":"debug",
+        "pathRewrite": {
+            "^/bookImages": ""
+        },
+        "changeOrigin":true
+    },
+    "/saveOrder":{
+        "target":"http://localhost:8080/bookStore/saveOrder",
+        "secure":true,
+        "logLevel":"debug",
+        "pathRewrite": {
+            "^/saveOrder": ""
+        },
+        "changeOrigin":true
+    },
+    "/saveUser":{
+        "target":"http://localhost:8080/bookStore/saveUser",
+        "secure":true,
+        "logLevel":"debug",
+        "pathRewrite": {
+            "^/saveUser": ""
+        },
+        "changeOrigin":true
+    },
+    "/getUsers":{
+        "target":"http://localhost:8080/bookStore/getUsers",
+        "secure":true,
+        "logLevel":"debug",
+        "pathRewrite": {
+            "^/getUsers": ""
+        },
+        "changeOrigin":true
+    },
+    "/getUser":{
+        "target":"http://localhost:8080/bookStore/getUser",
+        "secure":true,
+        "logLevel":"debug",
+        "pathRewrite": {
+            "^/getUser": ""
+        },
+        "changeOrigin":true
+    },
+    "/paymentGateway":{
+        "target":"http://localhost:8080/payment/paymentGateway",
+        "secure":true,
+        "logLevel":"debug",
+        "pathRewrite": {
+            "^/paymentGateway": ""
+        },
+        "changeOrigin":true
+    }
+
+}

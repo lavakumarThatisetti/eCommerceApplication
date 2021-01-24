@@ -1,0 +1,87 @@
+.card-img-top{
+    height: 250px;
+}
+#item{
+    width: 250px;
+}
+#cardAlign{
+    width: 400px;
+}
+span.stars, span.stars span {
+    display: flex;
+    background: url('https://apppresser.com/wp-content/uploads/2015/11/stars.png') 0 -16px repeat-x;
+    width: 80px;
+    height: 16px;
+}
+span.stars span {
+    background-position: 0 0;
+}
+.card-title{
+    color: #0d7cc9!important;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#description span{
+    color: #777;
+}
+
+#price{
+    color: maroon;
+    font-size: 30px;
+}
+#rupee{
+    color: maroon;
+    font-size: 24px;
+}
+.span4 img {
+    margin-right: 10px;
+    height:300px;
+}
+.span4 #imgInModel {
+    float: none;
+    width: 100%;
+    
+}
+#btnCart,
+#btnBuy{
+    display: inline-block;
+    vertical-align: top;
+}
+.modal-body{
+    padding: 2%;
+}
+.span4 p {
+    padding: 2%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+.span4 h3{
+    color:darkred;
+    margin-left: 0.2%;
+    padding: 2%;
+}
+.span4 #readers,#isbn,#rating{
+    margin-left: 2%;
+}
+.modal-content .modal-header #modelTitle{
+    text-align: center;
+    color:indigo;
+}
+
+  ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+  background: #f1f3f5;
+  border-left: 1px solid darken(#f1f3f5, 10%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: darken(#f1f3f5, 20%);
+}
+
+@media only screen and (max-width: 900px){
+
+}
+@media(max-width:720px){
+
+}

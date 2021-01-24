@@ -1,0 +1,51 @@
+<!--Book List-->
+<div style="text-align:center">
+    <h1>
+          Your Orders
+    </h1>
+</div>
+<div id="backtoMainMenu">
+    <button class = 'btn btn-warning' (click) ="mainMenu()"> <i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Main Menu</button>
+</div>
+
+ <!--Book List-->
+ <br/>
+ <div id="BooksList" class="container">
+    <div id="booklist" *ngFor="let book of orderedBooksList; index as ndx">
+       <div class="card mb-3">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img class='card-img-top' src="{{book.Image}}" alt="book image"/>
+          </div>
+          <div class="col-md-8">
+           <div class="card-body">
+              <h2 class="card-title">
+                {{book.title}} 
+              </h2>
+              <br>
+              <div class="card-text">
+                <div id="description">
+                    <span id="author_name"><b>{{book.authors}}</b></span> <span> (Author)</span>
+                </div>
+                <br>
+                <div id="rating">
+                    <span class="stars">
+                      <span [ngStyle]="{'width':(book.average_rating)/5 * 100 + '%'}"></span>
+                    </span>
+                </div>
+                <br>
+                <div>
+                      Readears: <i class="fa fa-book" aria-hidden="true"></i>
+                      <span> {{book.ratings_count}}</span>
+                </div>
+                <hr>
+                <div id="priceStyle">
+                  <span id="rupee"><sup>&#8377;</sup></span><span id="price">{{book.price}}</span>
+                </div>
+              </div>
+          </div>
+          </div>
+          </div>
+    </div>
+</div>
+ </div>
