@@ -19,7 +19,7 @@ const httpOptions ={
 })
 export class PaymentsService {
   baseUrl = environment.baseUrl;
-  paymentGatewayUrl='/paymentGateway';
+  paymentGatewayUrl='payment/paymentGateway';
   constructor(private http:HttpClient) { }
   sendPayment(order: Order):Observable<any>{
     console.log("this ",order);

@@ -11,7 +11,7 @@ import {environment} from '../../environments/environment';
 export class CheckinService {
   checkBooks = new BehaviorSubject<any[]>([]);
   baseUrl = environment.baseUrl
-  saveOrderUrl='/saveOrder';
+  saveOrderUrl='bookStore/saveOrder';
   constructor(private http:HttpClient) { }
 
   saveOrder(order: Order):Observable<any>{

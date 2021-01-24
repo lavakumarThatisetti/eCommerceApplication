@@ -20,8 +20,8 @@ const httpOptions ={
 export class UsersService {
 
   baseUrl = environment.baseUrl;
-  saveUserUrl='/saveUser';
-  getUserUrl = '/getUser';
+  saveUserUrl='bookStore/saveUser';
+  getUserUrl = 'bookStore/getUser';
   constructor(private http:HttpClient) { }
   saveUser(user: User):Observable<any>{
     return this.http.post(this.baseUrl+this.saveUserUrl,user);
