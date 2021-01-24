@@ -18,8 +18,8 @@ const httpOptions ={
 })
 export class BooksService {
 
-  booksUrl = '/books';
-  bookImages = '/bookImages';
+  booksUrl = 'https://s3-ap-southeast-1.amazonaws.com/he-public-data/books8f8fe52.json';
+  bookImages = 'https://s3-ap-southeast-1.amazonaws.com/he-public-data/bookimage816b123.json';
   constructor(private http:HttpClient) { }
 
   getBooks():Observable<Books[]>{
