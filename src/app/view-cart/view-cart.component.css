@@ -48,3 +48,35 @@ button{
 .card-total{
     color: rgb(192, 152, 23);
 }
+@media only screen and (max-width: 900px){
+    #welcome{
+        font-size: 20px;
+    }
+    #item{
+        width: 50%;
+    }
+    #cardAlign{
+        width: 100%;
+    }
+}
+@media(max-width:720px){
+    #welcome{
+        font-size: 20px;
+    }
+    #item{
+        width: 100%;
+    }
+    #cardAlign{
+        width: 100%;
+    }
+    #BooksList{
+        float: none;
+        width: 100%;
+    }
+    .totalItems{
+        float:none;
+        width: 100%;
+        margin-right: 2%;
+        margin-left: 2%;
+    }
+}

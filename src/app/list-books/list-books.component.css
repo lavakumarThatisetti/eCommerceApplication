@@ -80,8 +80,24 @@ span.stars span {
 }
 
 @media only screen and (max-width: 900px){
-
+    #welcome{
+        font-size: 20px;
+    }
+    #item{
+        width: 50%;
+    }
+    #cardAlign{
+        width: 100%;
+    }
 }
 @media(max-width:720px){
-
+    #welcome{
+        font-size: 20px;
+    }
+    #item{
+        width: 100%;
+    }
+    #cardAlign{
+        width: 100%;
+    }
 }
