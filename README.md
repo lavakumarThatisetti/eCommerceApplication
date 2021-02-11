@@ -14,14 +14,26 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+## End to End Ecommerce Application Includes Payment Gateway 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Front End : Angular
+			Bootstrap
+			Jquery
+			HTML
+			CSS
+			
+## Back End : Spring Boot
 
-## Running end-to-end tests
+## Cloud: Heroku
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## Git Repository Links:
+  
+## Back-end Repo:
+https://github.com/lavakumarThatisetti/eCommerceApplicationBackend/tree/master
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Fron-end Repo:
+https://github.com/lavakumarThatisetti/eCommerceApplication/tree/master
+
+## Heroku Cloud URL: 
+https://ekart-books-zonee.herokuapp.com/
