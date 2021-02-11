@@ -16,15 +16,18 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## End to End Ecommerce Application Includes Payment Gateway 
 
-## Front End : Angular
+## Front End : 
+      Angular
 			Bootstrap
 			Jquery
 			HTML
 			CSS
 			
-## Back End : Spring Boot
+## Back End :
+      Spring Boot
 
-## Cloud: Heroku
+## Cloud: 
+      Heroku
 
 
 ## Git Repository Links:
