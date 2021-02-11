@@ -18,10 +18,10 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Front End : 
       Angular
-			Bootstrap
-			Jquery
-			HTML
-			CSS
+      Bootstrap
+      Jquery
+      HTML
+      CSS
 			
 ## Back End :
       Spring Boot
